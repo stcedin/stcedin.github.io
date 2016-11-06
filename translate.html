@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link href="css/basic.css" type="text/css" rel="stylesheet">
+<title>Insert title here</title>
+
+<script src="script/jquery-3.1.1.min.js"></script>
+<script>
+
+  var title = '';
+  function getRandom() {  
+	     var root = "https://jsonplaceholder.typicode.com";
+         $.ajax({
+             type : "GET",
+             dataType : "text",
+                async : true,
+                //url : root + '/posts/1',
+                url : root + '/photos/67',
+                error : function(request, status, error) {
+                    $("p.result").html("Failed to invoke directions rest service: " + error);
+                },
+                success : function(data) {
+                    var object = JSON.parse(data);
+                    //var title = object.title;
+                    title = object.title;
+                    alert("Title before: " + title);
+                    var image = object.url;
+                    $("p.source").html(title);
+                    //var imgsrc = "<img src=\"" + image + "\"/>";
+                    //$("p.body").html(imgsrc);
+                }
+         });
+  }
+
+  function translate() {
+	     var sourceLang = "auto";
+	     var targetLang = "en";
+	     //var sourceText = $("p.source").text();
+	     alert("Title after: " + title);
+	     alert("src: "  + title);
+	     var sourceText = title;
+	     var urlxx = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" 
+	            + sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(sourceText);
+
+         $.ajax({
+             type : "GET",
+             dataType : "text",
+                async : true,
+                //url : root + '/posts/1',
+                url : urlxx,
+                error : function(request, status, error) {
+                    $("p.result").html("Failed to invoke directionsXXX rest service: " + error);
+                },
+                success : function(data) {
+					<!-- https://ctrlq.org/code/19909-google-translate-api -->
+
+					var idxStart = data.indexOf('"');	
+				  	var idxEnd = data.indexOf('"', idxStart+1);
+	        		var translatedText = data.substring(idxStart+1, idxEnd);
+	        		$("p.translation").html(translatedText);
+                }
+         });
+    }
+
+    $(document).ready(function() {
+        //$("#generate-button").click(function() {
+        getRandom();
+        translate();
+        //});
+    });
+
+    
+
+  </script>
+
+
+</head>
+<body>
+	<p class="source"></p>
+	<!--<p class="body"></p> -->
+	<p class="translation"></p>
+</body>
+</html>

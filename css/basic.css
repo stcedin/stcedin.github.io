@@ -11,6 +11,24 @@ body.bike {
 	background-repeat: no-repeat	
 }
 
+bike {
+	background-image: url("../img/bike.jpg");
+	color: lightblue;
+	background-repeat: no-repeat	
+}
+
+body.hardware {
+	background-image: url("../img/streetoflight.jpg");
+	color: lightblue;
+	background-repeat: no-repeat	
+}
+
+hardware {
+	background-image: url("../img/streetoflight.jpg");
+	color: lightblue;
+	background-repeat: no-repeat	
+}
+
 
 h1 {
   size: 20px;

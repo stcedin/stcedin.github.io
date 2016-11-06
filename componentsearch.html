@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link href="css/basic.css" type="text/css" rel="stylesheet">
+<title>Bike Search</title>
+
+<script src="script/jquery-3.1.1.min.js"></script>
+
+<script>
+  function searchSites(form) {  
+         $("p.result").html("Search Running...");
+<!-- https://stcedin.github.io/bikesearch.html -->
+         var item = form.item.value;
+         item = item.replace(' ', '+');
+         var typeSelected = document.querySelector('input[name = "select"]:checked').value;
+         
+ 		 var bikeSites = ["http://www.chainreactioncycles.com/s?q=" + item, 
+ 						"http://www.wiggle.co.uk/" + item,
+						"http://www.chainreactioncycles.com/s?q=" + item,
+						"http://bikes.merlincycles.com/search#?w=" + item,
+						"http://www.allterraincycles.co.uk/Search?q=" + item,
+						"http://www.ebay.co.uk/sch/i.html?LH_ItemCondition=3&_nkw=" + item
+ 		 ]
+ 		 var compSites = [
+ 			"http://www.screwfix.com/search.do?fh_search=" + item,
+ 			"http://www.toolstation.com/search?searchstr=" +  item,
+ 			"http://www.ebay.co.uk/sch/i.html?LH_ItemCondition=3&_nkw=" + item
+ 	     ]
+
+ 		var sites = compSites;
+  		if (typeSelected == "bike") {
+  			sites = bikeSites;
+  			//$("body").addClass('bike');
+  			//$("body").removeClass('hardware');
+  	    } else {
+  			//$("body").addClass('hardware');
+  			//$("body").removeClass('bike');
+  	  	}
+
+ 		for (var i=0; i < sites.length; i++) {
+ 	 		var url=sites[i];
+ 			var win = window.open(url, '_blank');
+ 			win.focus();
+ 		}
+ 		$("p.result").html("Searching complete");
+  }
+
+    $(document).ready(function() {
+        $("#searchButton").click(function() {
+            alert("searching");
+              searchCR(item);
+        });
+    });
+
+  </script>
+
+
+</head>
+<body class="bike">
+	<h1>Component search</h1>
+	<p>Select the category of component to search, and it will load the results from popular web sites.</p>
+	<form name="search">
+	  <input type="radio" name="select" value="bike" id="bike" checked>Bike<br>
+	  <input type="radio" name="select" value="hardware" id="hardware">Hardware<br>
+	  <br>
+	  Search Item:<br>
+	  <input type="text" name="item"><br>
+	  <br>
+	  <input type="button" name="submit" value="submit" onClick="searchSites(this.form)">
+	</form>
+	
+	<p class="result"></p>
+</body>
+</html>
