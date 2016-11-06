@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link href="css/basic.css" type="text/css" rel="stylesheet">
+<title>Insert title here</title>
+
+<script src="script/jquery-3.1.1.min.js"></script>
+<script>
+
+  function directions() {  
+         alert("Directions");
+	     $("p.result").html("Running direction look up...");
+
+	     var root = "https://jsonplaceholder.typicode.com";
+         $.ajax({
+             type : "GET",
+             dataType : "text",
+                async : true,
+                //url : root + '/posts/1',
+                url : root + '/photos/67',
+                error : function(request, status, error) {
+                    $("p.result").html("Failed to invoke directions rest service: " + error);
+                },
+                success : function(data) {
+                    var object = JSON.parse(data);
+                    var title = object.title;
+                    var image = object.url;
+                    //alert("body: " + body);
+                    alert("url: " + image);
+                    $("p.title").html(title);
+                    var imgsrc = "<img src=\"" + image + "\"/>";
+                    alert(imgsrc);
+                    $("p.body").html(imgsrc);
+                }
+         });
+  }
+
+  function translate() {
+         alert("Resultxx: ");
+	     var sourceLang = "auto";
+	     var targetLang = "en";
+	     var sourceText = "veritatis labore ipsum unde aut quam dolores";
+	     var urlxx = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" 
+	            + sourceLang + "&tl=" + targetLang + "&dt=t&q=" + encodeURI(sourceText);
+
+	     alert("trying");
+         $.ajax({
+             type : "GET",
+             dataType : "text",
+                async : true,
+                //url : root + '/posts/1',
+                url : urlxx,
+                error : function(request, status, error) {
+                	alert("fail");
+                    $("p.result").html("Failed to invoke directionsXXX rest service: " + error);
+                },
+                success : function(data) {
+					alert("success" + data);
+					<!-- https://ctrlq.org/code/19909-google-translate-api -->
+          		  //var resultxx = JSON.parse(data);
+        		  //alert("Resultxx: " + resultxx);
+        		  var translatedText = data[0][0][0];
+        		  alert("Resultxy: " + translatedText);
+        		  var json = {
+        		    'sourceText' : sourceText,
+        	    	'translatedText' : translatedText
+        	  		};
+                    
+                }
+         });
+    }
+
+    $(document).ready(function() {
+        //$("#generate-button").click(function() {
+        alert("ready");
+        //directions();
+        translate();
+        //});
+    });
+
+    
+
+  </script>
+
+
+</head>
+<body>
+	<p class="title"></p>
+	<p class="body"></p>
+	<p class="result">Where do we go</p>
+</body>
+</html>
