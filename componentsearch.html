@@ -3,11 +3,13 @@
 <head>
 <meta charset="ISO-8859-1">
 <link href="css/basic.css" type="text/css" rel="stylesheet">
-<title>Bike Search</title>
+   <link href="css/menu.css" type="text/css" rel="stylesheet">
+<title>Component Search</title>
 
 <script src="script/jquery-3.1.1.min.js"></script>
 
 <script>
+
   function searchSites(form) {  
          $("p.result").html("Search Running...");
 <!-- https://stcedin.github.io/bikesearch.html -->
@@ -31,12 +33,7 @@
  		var sites = compSites;
   		if (typeSelected == "bike") {
   			sites = bikeSites;
-  			//$("body").addClass('bike');
-  			//$("body").removeClass('hardware');
-  	    } else {
-  			//$("body").addClass('hardware');
-  			//$("body").removeClass('bike');
-  	  	}
+  		}
 
  		for (var i=0; i < sites.length; i++) {
  	 		var url=sites[i];
@@ -57,8 +54,13 @@
 
 
 </head>
-<body class="bike">
-	<h1>Component search</h1>
+<body class="component">
+
+	<!-- Menu Options -->
+	<!-- Remember to include the menu.css -->
+	<script src="script/menu.js"></script>
+
+	<h1>Component Search</h1>
 	<p>Select the category of component to search, and it will load the results from popular web sites.</p>
 	<form name="search">
 	  <input type="radio" name="select" value="bike" id="bike" checked>Bike<br>

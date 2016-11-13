@@ -1,0 +1,32 @@
+@CHARSET "ISO-8859-1";
+
+body.translation {
+	background-color: lightblue;
+	background-image: url("../img/translate.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+}
+
+.horiz {
+    float:left;
+}
+
+.button {
+	background-color: white;
+	color: blue;
+	padding: 10px 10px 10px 10px;
+	margin: 5px 20px 5px 20px;
+	border: 0px 0px 0px 0px;
+}
+
+.number {
+	background-color: white;
+	color: black;
+	padding: 10px 10px 10px 10px;	
+	margin: 20px 20px 5px 20px;	
+}
+
+.highlight {
+	color: red;
+}
