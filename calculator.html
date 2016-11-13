@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <meta charset="ISO-8859-1">
-   <link href="css/basic.css" type="text/css" rel="stylesheet">
-   <link href="css/menu.css" type="text/css" rel="stylesheet">
+    <meta charset="ISO-8859-1">
+    <link href="css/basic.css" type="text/css" rel="stylesheet">
+    <link href="css/menu.css" type="text/css" rel="stylesheet">
+	<link href="css/calculator.css" rel="stylesheet" type="text/css" />
+	<script src="script/jquery-3.1.1.min.js"></script>
+	<script src='script/calculator.js' type="text/javascript"></script>
+    <script src="script/jquery-3.1.1.min.js"></script>
    <title>Calculator</title>
 </head>
+
 <body class="calculator">
 
 	<!-- Menu Options -->
 	<!-- Remember to include the menu.css -->
 	<script src="script/menu.js"></script>
-	
-	<h1>Work in progress...</h1>
+
+	<div id="calculator">
+		    <div id="total">
+		    </div>
+		    <div id="operators">
+		        <a id="plus">+</a>
+		        <a id="minus">-</a>
+		        <a id="divide">/</a>
+		        <a id="multiply">*</a>
+		        <a id="equals">=</a>
+		    </div>
+		    <div id="numbers">
+		        <a id="one">1</a>
+		        <a id="two">2</a>
+		        <a id="three">3</a>
+		        <a id="four">4</a>
+		        <a id="five">5</a>
+		        <a id="six">6</a>
+		        <a id="seven">7</a>
+		        <a id="eight">8</a>
+		        <a id="nine">9</a>
+		        <a id="clear">C</a>
+		        <a id="zero">0</a>
+		        <a id="clearall">AC</a>
+		    </div>
+	</div>
 </body>
 </html>

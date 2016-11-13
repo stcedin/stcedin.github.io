@@ -24,6 +24,14 @@ body.component {
 	margin:auto;
 }
 
+body.calculator {
+    text-align:center;
+	width:100%;
+	display:block;
+	margin:auto;
+	background-color: lightgrey;
+}
+
 hardware {
 	background-image: url("../img/streetoflight.jpg");
 	color: lightblue;

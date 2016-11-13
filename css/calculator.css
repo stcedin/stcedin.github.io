@@ -1,0 +1,92 @@
+@CHARSET "ISO-8859-1";
+body, div, a {
+    padding:0;
+    margin:0;
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#calculator {
+    width: 310px;
+    height: 460px;
+    align: centre;
+    margin: 10px 10px 10px 10px;
+    padding: 5px 5px 5px 5px;
+    background-color: #999;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#total {
+	height: 70px;
+	width: 300px;
+	margin: 0px;
+	margin-bottom: 5px;
+	padding: 0px 5px;
+	background-color: #FFF;
+	text-align: right;
+	font-size: 60px;
+}
+
+#numbers {
+	margin: 0px;
+}
+
+#operators {
+	margin: 0px;
+}
+
+a {
+	cursor: pointer;	
+}
+
+#operators a {
+ 	display: block;
+ 	width: 45px;
+ 	height: 45px;
+ 	float: left;
+ 	padding: 2px;
+ 	margin: 5px 6px;
+ 	text-align: center;
+ 	font-size: 39px;
+}
+
+#button {
+    float: left
+    padding: 2px;
+    margin: 5px 6px;
+    text-align: centre;
+    text-decoration: none;
+    color: black;
+    font-size: 39px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
+    background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
+    border-radius: 10px;
+}
+
+#numbers a {
+    display: block;
+    float: left;
+    text-align: center;
+    color: black;
+    font-size: 43px;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#EDEDED), to(#DCDCDC));
+    background: -moz-linear-gradient(top, #EDEDED, #DCDCDC);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 15px;
+}
+
+#numbers a:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(#DCDCDC), to(red));
+    background: -moz-linear-gradient(top,  #DCDCDC,  red);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DCDCDC', endColorstr='#EDEDED');
+}
+
+#operators a:hover{
+    background: -webkit-gradient(linear, left top, left bottom, from(#DCDCDC), to(yellow));
+    background: -moz-linear-gradient(top,  #DCDCDC,  yellow);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#DCDCDC', endColorstr='#EDEDED');
+}
