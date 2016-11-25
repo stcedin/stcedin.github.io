@@ -12,6 +12,7 @@ body.home {
 	margin:auto;
 }
 
+
 body.component {
 	background-image: url("../img/component.png");
 	color: darkblue;
@@ -51,3 +52,22 @@ footer {
 	font-style: italic;
 }
 
+.radio-label {
+    float: left;
+    margin-right: 3%;
+}
+.radio-input {
+    float: left;
+}
+fieldset {
+    text-align: center;
+}
+
+.formlayout {
+    display: inline-block;
+    margin: auto;
+    border: 1px solid black;
+}
+.compbutton {
+	margin: 20px;
+}
