@@ -63,13 +63,17 @@
 	<h1>Component Search</h1>
 	<p>Select the category of component to search, and it will load the results from popular web sites.</p>
 	<form name="search">
-	  <input type="radio" name="select" value="bike" id="bike" checked>Bike<br>
-	  <input type="radio" name="select" value="hardware" id="hardware">Hardware<br>
-	  <br>
-	  Search Item:<br>
-	  <input type="text" name="item"><br>
-	  <br>
-	  <input type="button" name="submit" value="submit" onClick="searchSites(this.form)">
+	<fieldset>	
+	<div class="formlayout">
+	  <input class="radio-input" type="radio" name="select" value="bike" id="bike" checked>
+	  <label class="radio-label">Bike</label>
+	  <input class="radio-input" type="radio" name="select" value="hardware" id="hardware">
+	  <label class="radio-label">Hardware</label>
+	  <label for="item">Search Item:</label>
+	  <input type="text" name="item" id="item">
+	  <input class="compbutton" type="button" value="Search" onClick="searchSites(this.form)">
+	</div>  
+	</fieldset>  
 	</form>
 	
 	<p class="result"></p>
