@@ -1,0 +1,16 @@
+@CHARSET "ISO-8859-1";
+
+.slideshow {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+.slideshow img {
+    display: block;
+    margin: auto;
+    height: 90%;
+}
+
+

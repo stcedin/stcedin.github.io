@@ -1,6 +1,6 @@
 @CHARSET "ISO-8859-1";
 
-ul.menu {
+.menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -8,11 +8,11 @@ ul.menu {
     background-color: #333;
 }
 
-li {
+.menu li {
     float: left;
 }
 
-li a {
+.menu li a {
     display: block;
     color: white;
     text-align: center;
@@ -21,6 +21,6 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+.menu li a:hover {
     background-color: #111;
 }

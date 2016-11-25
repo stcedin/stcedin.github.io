@@ -45,7 +45,6 @@
 
     $(document).ready(function() {
         $("#searchButton").click(function() {
-            alert("searching");
               searchCR(item);
         });
     });
@@ -63,17 +62,17 @@
 	<h1>Component Search</h1>
 	<p>Select the category of component to search, and it will load the results from popular web sites.</p>
 	<form name="search">
-	<fieldset>	
-	<div class="formlayout">
-	  <input class="radio-input" type="radio" name="select" value="bike" id="bike" checked>
-	  <label class="radio-label">Bike</label>
-	  <input class="radio-input" type="radio" name="select" value="hardware" id="hardware">
-	  <label class="radio-label">Hardware</label>
-	  <label for="item">Search Item:</label>
-	  <input type="text" name="item" id="item">
-	  <input class="compbutton" type="button" value="Search" onClick="searchSites(this.form)">
-	</div>  
-	</fieldset>  
+		<fieldset>	
+			<div class="formlayout">
+	  			<input class="radio-input" type="radio" name="select" value="bike" id="bike" checked>
+	  			<label class="radio-label">Bike</label>
+	  			<input class="radio-input" type="radio" name="select" value="hardware" id="hardware">
+	  			<label class="radio-label">Hardware</label>
+	  			<label for="item">Search Item:</label>
+	  			<input type="text" name="item" id="item">
+	  			<input class="compbutton" type="button" value="Search" onClick="searchSites(this.form)">
+			</div>  
+		</fieldset>  
 	</form>
 	
 	<p class="result"></p>
