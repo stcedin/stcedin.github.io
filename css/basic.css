@@ -50,6 +50,7 @@ p {
 
 footer {
 	font-style: italic;
+	text-align:bottom;
 }
 
 .radio-label {
@@ -67,6 +68,7 @@ fieldset {
     display: inline-block;
     margin: auto;
     border: 1px solid black;
+    padding: 50px;
 }
 .compbutton {
 	margin: 20px;

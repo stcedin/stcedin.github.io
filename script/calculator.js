@@ -4,7 +4,6 @@ $(document).ready(function() {
         if (number.length > 9) {
         	var numeric = parseInt(number, 10);
         	if (numeric < 0) {
-        		alert("<0");
         		totaldiv.text(number.substr(0,8));
         	} else if (numeric > 999999999) {
         		totaldiv.text("Overflow");
@@ -69,7 +68,6 @@ $(document).ready(function() {
     $(document).keypress(function(event){
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if (keycode === 49) {
-        	alert("Key press one");
             $("#one").click();
        } else if (keycode === 50) {
             $("#two").click();
