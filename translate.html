@@ -33,7 +33,7 @@
                     	var object = JSON.parse(data);
                     	title = object.title;
                     	var image = object.url;
-                    	$("p.source").html("<hr>" +title + "<hr>");
+                    	$("p.source").html("<hr>" + title + "<hr>");
                     	$("p.instruction").html("Now that you have a generated expression, go ahead and translate it to english.");
                     	$("p.translation").html('');
 	                    $("form.translate").show();
@@ -86,25 +86,21 @@
 	<p>This page uses a rest service to generate some random non english expressions from a 
 	publicly available rest service, provided for learning purposes.  The text returned is
 	then fired through google translate to determine the English</p>
-	<p>The seeding number is used to select the text from a bounded list pre-defined in the public rest service.
+	<p>The seeding number is used to select the text from a bounded list pre-defined in the public rest service.</p>
 	<hr>
-	<p>
-			<form name="generate">
-				<label for="seed">Select a random seeding number, and then generate an expression:</label><br>
-				<input type="number" class="number" name="seed" min="1" max="50" id="seed"><br>
-				<input type="button" class="button" value="Generate Expression" id="generate" onClick="getRandom(this.form)">
-			</form>
-	<p>
+	<form name="generate">
+		<label for="seed">Select a random seeding number, and then generate an expression:</label><br>
+		<input type="number" class="number" name="seed" min="1" max="50" id="seed"><br>
+		<input type="button" class="button" value="Generate Expression" id="generate" onClick="getRandom(this.form)">
+	</form>
 
 	<br> 
 	<p class="source highlight"></p>
 	<p class="instruction"></p>
      
-    <p>
-		<form name="translate" class="translate">
-			<input type="button" class="button" value="Translate" id="translate" onClick="getTranslation()">
-		</form>
-	<p>
+	<form name="translate" class="translate">
+		<input type="button" class="button" value="Translate" id="translate" onClick="getTranslation()">
+	</form>
 
 	<p class="translation highlight"></p>
 
