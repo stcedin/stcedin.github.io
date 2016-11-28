@@ -37,8 +37,8 @@
 
  		for (var i=0; i < sites.length; i++) {
  	 		var url=sites[i];
- 	 		alert("Opening url " + url);
- 			var win = window.open(url, '_blank');
+ 	 		window.open(url, i+1);
+ 			//var win = window.open(url, '_blank');
  			//Need to use an event handler for this
  			//win.focus();
  		}
