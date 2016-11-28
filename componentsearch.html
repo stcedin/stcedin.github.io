@@ -38,7 +38,8 @@
  		for (var i=0; i < sites.length; i++) {
  	 		var url=sites[i];
  			var win = window.open(url, '_blank');
- 			win.focus();
+ 			//Need to use an event handler for this
+ 			//win.focus();
  		}
  		$("p.result").html("Searching complete");
   }
