@@ -10,6 +10,8 @@
 
 <script>
 
+$(document).ready(function() {
+
   function searchSites(form) {
          $("p.result").html("Search Running...");
 <!-- https://stcedin.github.io/bikesearch.html -->
@@ -45,13 +47,15 @@
  		$("p.result").html("Searching complete");
   }
 
-    $(document).ready(function() {
+  });
+
         <!--
+    $(document).ready(function() {
         $("#searchButton").click(function() {
               searchCR(item);
         });
-        -->
     });
+    -->
 
   </script>
 
