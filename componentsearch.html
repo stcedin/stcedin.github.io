@@ -37,13 +37,18 @@
 
  		for (var i=0; i < sites.length; i++) {
  	 		var url=sites[i];
- 	 		window.open(url, '_blank');
+ 	 		openCompWindow(url);
+ 	 		//window.open(url, '_blank');
  			//var win = window.open(url, '_blank');
  			//Need to use an event handler for this
  			//win.focus();
  		}
  		$("p.result").html("Searching complete");
   };
+
+  	function openCompWindow(url) {
+  		window.open(url, '_blank');
+  	};
 
 
         <!--
